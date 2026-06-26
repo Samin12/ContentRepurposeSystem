@@ -1,0 +1,25 @@
+{
+  "name": "content-repurpose-system",
+  "version": "1.0.0",
+  "description": "Turn one YouTube video into a full content engine: onboard your channel and voice, then ideate, title, hook, outline, repurpose into blog/Twitter/LinkedIn, and slice short-form clips — all in your voice, grounded in your channel's real performance data.",
+  "author": {
+    "name": "Samin Yasar",
+    "url": "https://github.com/Samin12"
+  },
+  "homepage": "https://github.com/Samin12/ContentRepurposeSystem",
+  "repository": "https://github.com/Samin12/ContentRepurposeSystem",
+  "license": "MIT",
+  "keywords": [
+    "youtube",
+    "content-repurposing",
+    "creator-tools",
+    "blog",
+    "twitter",
+    "linkedin",
+    "short-form",
+    "reels",
+    "shorts",
+    "hooks",
+    "skills"
+  ]
+}

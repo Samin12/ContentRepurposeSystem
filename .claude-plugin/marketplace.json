@@ -1,0 +1,24 @@
+{
+  "name": "samin-content-marketplace",
+  "owner": {
+    "name": "Samin Yasar",
+    "url": "https://github.com/Samin12"
+  },
+  "metadata": {
+    "description": "Samin Yasar's content tooling for Claude Code.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "content-repurpose-system",
+      "source": "./",
+      "description": "Onboard your YouTube channel + voice, then ideate, title, hook, outline, and repurpose every video into blog, Twitter, LinkedIn, and short-form clips.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samin Yasar",
+        "url": "https://github.com/Samin12"
+      },
+      "keywords": ["youtube", "content-repurposing", "creator-tools", "short-form", "skills"]
+    }
+  ]
+}

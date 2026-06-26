@@ -1,0 +1,15 @@
+# Secrets — never commit
+.env
+**/.env
+*.env.local
+
+# Generated content output
+content/
+*.tmp
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+node_modules/
+__pycache__/
+*.pyc
