@@ -133,6 +133,8 @@ Then generate the blog post by following ALL the guidelines in that prompt. The 
 
 **Long-form visual requirement:** Every long-form article must include real visual assets, not placeholder prose. Generate or attach actual `.jpg`, `.jpeg`, or `.png` image files from a strong image model such as GPT Image, Higgsfield, Nous/FAL image generation, or another approved high-quality model. Use those files in the article with captions and alt text. Add relevant generated images, diagrams exported as image files, and source-video screenshots where they explain a workflow, tool UI, before/after result, architecture, or multi-step process. Do not leave the article as text-only unless the user explicitly asks for text-only.
 
+**Explainer diagram style:** Default long-form article visuals to simple Anthropic-light explainer diagrams inspired by clean editorial references such as clawd.rip, without copying them. Use an off-white canvas, black/charcoal type, thin gray rules, warm clay/orange accents, simple boxes/arrows/pixel-style accents, lots of whitespace, and a clear left-to-right or top-to-bottom flow. Each image should visualize the adjacent text's core idea, not decorate it. Keep text inside images to 0-4 short labels, no paragraphs. If exact labels matter, create deterministic SVG/HTML/Canvas/Pillow diagrams and export them to real PNG files instead of asking an image model to render text. Size article images to the same max width as the text column and make them responsive (`width: 100%; max-width: var(--content-width); height: auto;`).
+
 **Generate these fields:**
 - `meta_title` — under 60 chars with primary keyword
 - `meta_description` — 150-160 chars with keyword and CTA
@@ -142,7 +144,7 @@ Then generate the blog post by following ALL the guidelines in that prompt. The 
 - `excerpt` — 1-2 sentence summary for preview cards
 - `tags` — 3-7 topic tags
 - `cover_image` — always use the YouTube thumbnail: `https://i.ytimg.com/vi/VIDEO_ID_HERE/maxresdefault.jpg`
-- `visual_assets` — 5-8 actual visual files for the article. Each asset must be a real `.jpg`, `.jpeg`, or `.png` file generated or captured before publishing. Include the type (`generated_image`, `generated_diagram_image`, `chart_image`, or `video_screenshot`), model/source used (for example GPT Image, Higgsfield, or Nous/FAL), local/public file path, exact placement after an H2/H3, alt text, caption, and source frame/timestamp when using a screenshot from the video.
+- `visual_assets` — 5-8 actual visual files for the article. Each asset must be a real `.jpg`, `.jpeg`, or `.png` file generated or captured before publishing. Prefer `generated_diagram_image` assets in the simple Anthropic-light explainer style above. Include the type (`generated_image`, `generated_diagram_image`, `chart_image`, or `video_screenshot`), model/source used (for example GPT Image, Higgsfield, Nous/FAL, or deterministic SVG/HTML/Pillow diagram renderer), local/public file path, exact placement after an H2/H3, alt text, caption, and source frame/timestamp when using a screenshot from the video.
 - `content` — the full blog post in markdown (1,500-2,500 words)
 - `review_notes` — what was cut from the transcript and any [STAT NEEDED] flags
 
