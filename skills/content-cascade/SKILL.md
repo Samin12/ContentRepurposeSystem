@@ -131,7 +131,7 @@ Read file: ${CLAUDE_PLUGIN_ROOT}/skills/content-cascade/prompts/blog-system-prom
 
 Then generate the blog post by following ALL the guidelines in that prompt. The transcript is your source material.
 
-**Long-form visual requirement:** Every long-form article must include visual explanation planning. Add relevant images, diagrams, and screenshot callouts throughout the article, especially where the transcript explains a workflow, tool UI, before/after result, architecture, or multi-step process. Screenshots can come from the source video when they explain a concept better than text. Do not leave the article as text-only unless the user explicitly asks for text-only.
+**Long-form visual requirement:** Every long-form article must include real visual assets, not placeholder prose. Generate or attach actual `.jpg`, `.jpeg`, or `.png` image files from a strong image model such as GPT Image, Higgsfield, Nous/FAL image generation, or another approved high-quality model. Use those files in the article with captions and alt text. Add relevant generated images, diagrams exported as image files, and source-video screenshots where they explain a workflow, tool UI, before/after result, architecture, or multi-step process. Do not leave the article as text-only unless the user explicitly asks for text-only.
 
 **Generate these fields:**
 - `meta_title` — under 60 chars with primary keyword
@@ -142,7 +142,7 @@ Then generate the blog post by following ALL the guidelines in that prompt. The 
 - `excerpt` — 1-2 sentence summary for preview cards
 - `tags` — 3-7 topic tags
 - `cover_image` — always use the YouTube thumbnail: `https://i.ytimg.com/vi/VIDEO_ID_HERE/maxresdefault.jpg`
-- `visual_assets` — 5-8 planned visuals for the article. Include the type (`image`, `diagram`, `chart`, or `video_screenshot`), exact placement after an H2/H3, suggested caption, and source frame/timestamp when using a screenshot from the video.
+- `visual_assets` — 5-8 actual visual files for the article. Each asset must be a real `.jpg`, `.jpeg`, or `.png` file generated or captured before publishing. Include the type (`generated_image`, `generated_diagram_image`, `chart_image`, or `video_screenshot`), model/source used (for example GPT Image, Higgsfield, or Nous/FAL), local/public file path, exact placement after an H2/H3, alt text, caption, and source frame/timestamp when using a screenshot from the video.
 - `content` — the full blog post in markdown (1,500-2,500 words)
 - `review_notes` — what was cut from the transcript and any [STAT NEEDED] flags
 
